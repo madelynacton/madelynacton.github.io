@@ -256,13 +256,10 @@ ul li a:hover {
     }
 
     .section__container {
-        /* Adjusted top padding to work with fixed nav/notice */
         padding: 5rem 1rem 5rem 1rem;
         text-align: center;
         grid-template-columns: repeat(1, 1fr);
     }
-    
-    /* FIX 2 Mobile: Ensure notice top is correct */
     .notice {
         top: 85px;
     }
@@ -274,4 +271,5 @@ ul li a:hover {
     .action__btns {
         margin: auto;
     }
+
 }
