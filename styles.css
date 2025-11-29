@@ -90,7 +90,7 @@ ul li a:hover {
 }
 
 .section {
-  margin-top: 100px;
+  margin-top: 120px;
     background-color: var(--extra-light);
     padding-bottom: 80px;
 }
@@ -217,11 +217,14 @@ ul li a:hover {
     background-color: var(--primary-color);
     color: #ffffff;
     text-align: center;
-    padding: 80px 20px;
+    padding: 75px 20px; 
     font-size: 1rem;
     display: block;
+    position: fixed;
+    top: 68px;
+    left: 0;
+    z-index: 99;
 }
-
 
 .section {
     background-color: var(--extra-light);
