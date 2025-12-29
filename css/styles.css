@@ -1303,7 +1303,9 @@ padding-top: 50px;
 * * * * * * * * * * * * * * * * * * * * * * * * */
 
 /* Small devices (landscape phones, 576px and up) */
-@media (width >=576px) {}
+@media (width >=576px) {
+
+}
 
 /* Medium devices (tablets, 769px and up) */
 @media (width >=768px) {
@@ -1533,26 +1535,19 @@ padding-top: 50px;
     font-size: var(--text-size-med);
   }
 
-  .interests-categories {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    max-width: 900px;
-    margin: 0 auto;
-    gap: 2rem;
-  }
-
-  .interest-group {
-    flex: 0 0 48%;
-    max-width: 48%;
-    min-width: 0;
-  }
 
   .interest-group h3 {
     font-size: var(--text-size-2xl);
   }
   .interest-group ul, .countries-list li{
     font-size: var(--text-size-lg);
+  }
+
+  .interest-group:last-child {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
   
 
@@ -1698,6 +1693,21 @@ padding-top: 50px;
 
   .resume-entry ul {
     margin-left: 1.5rem;
+  }
+
+  .interests-categories {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+
+  .interest-group {
+    flex: 0 0 48%;
+    max-width: 48%;
+    min-width: 0;
   }
 }
 
