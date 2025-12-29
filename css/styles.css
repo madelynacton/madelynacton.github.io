@@ -1076,16 +1076,15 @@ padding-top: 50px;
 }
 
 .contact-btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 1rem 1.6rem;
-  background-color: var(--dark-navy-3);
+  display: block;
+  width: fit-content;
+  margin: 0.75rem auto 2rem auto;
+  background: var(--dark-navy-3);
   color: white;
-  text-decoration: none;
+  padding: .8rem 1.5rem;
   border-radius: 8px;
-  font-size: var(--text-size-lg);
-  transition: 0.2s ease;
-  font-family: var(--font-base);
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .contact-btn:hover {
