@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <!-- add your own favicon - https://favicon.io/ -->
+    <link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon">
+    <!-- reset default browser stylesheet -->
+    <link rel="stylesheet" href="css/modern-normalize.css">
+    <!-- add google font and other resources here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- custom styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a class="logo" href="index.html">Madelyn Acton</a>
+
+            <i class="ri-menu-line menu-toggle"></i>
+
+            <ul class="nav-links">
+                <i class="ri-close-line menu-close"></i>
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+        <div class="menu-backdrop"></div>
+    </nav>
+
+    <section class="contact-container">
+
+        <img src="images/tree-portrait.jpeg" alt="Headshot" class="contact-photo">
+
+        <div class="contact-info">
+            <h1>Let's Connect!</h1>
+
+            <p class="contact-item">
+                <span class="mail-icon">&#x1F4E7;</span>:
+                <a href="mailto:madelynacton@gmail.com">madelynacton@gmail.com</a>
+            </p>
+
+            <p class="contact-item">
+                <img src="images/linkedin-icon.svg" alt="LinkedIn" class="link-icon-svg"> :
+                <a href="https://www.linkedin.com/in/madelyn-acton" target="_blank">linkedin.com/in/madelyn-acton</a>
+            </p>
+
+            <a href="resume.pdf" class="contact-btn" download>Download Resume</a>
+        </div>
+
+    </section>
+
+    <section class="contact-form-section">
+        <div class="contact-form-container">
+            <h2>Contact Form</h2>
+
+            <!-- contact form from formspree.io, styled by me -->
+            <form action="https://formspree.io/f/xrbnyraq" method="POST" class="contact-form">
+
+                <label>
+                    Name
+                    <input type="text" name="name" required>
+                </label>
+
+                <label>
+                    Email
+                    <input type="email" name="email" required>
+                </label>
+
+                <label>
+                    Subject
+                    <input type="text" name="subject">
+                </label>
+
+                <label>
+                    Message
+                    <textarea name="message" required></textarea>
+                </label>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        &copy; 2025 Madelyn Acton — Designed & coded using HTML, CSS, & JavaScript
+    </footer>
+
+    <script src="js/nav.js"></script>
+</body>
+
+</html>

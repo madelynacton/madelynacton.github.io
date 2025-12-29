@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministry of Jokes</title>
+
+    <link rel="shortcut icon" href="../resources/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/modern-normalize.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a class="logo" href="../index.html">Madelyn Acton</a>
+            <i class="ri-menu-line menu-toggle"></i>
+            <ul class="nav-links">
+                <i class="ri-close-line menu-close"></i>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../projects.html" class="active">Projects</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="menu-backdrop"></div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="tp-section tp-bg-1">
+        <div class="tp-container">
+            <a href="../projects.html" class="tp-back-btn">
+                <i class="ri-arrow-left-line"></i> Back to All Projects
+            </a>
+
+            <div class="tp-header-content">
+                <h1 class="tp-title">Ministry of Jokes</h1>
+                <p class="tp-description">A full-stack web app for joke submission, rating, AI-assisted moderation, and
+                    admin management.</p>
+
+                <div class="tp-meta-wrapper">
+                    <div class="tp-tech-icons">
+                        <abbr title="Docker"><img src="../images/docker-icon.svg" alt="Docker"></abbr>
+                        <abbr title="Flask"><img src="../images/flask.svg" alt="Flask"></abbr>
+                        <abbr title="GitHub">
+                            <img src="../images/github-icon.svg" alt="GitHub">
+                        </abbr>
+                        <abbr title="Gunicorn"><img src="../images/gunicorn.svg" alt="Gunicorn"></abbr>
+                        <abbr title="HTML5"><img src="../images/html-5.svg" alt="HTML5"></abbr>
+                        <abbr title="PostgreSQL"><img src="../images/postgresql.svg" alt="PostgreSQL"></abbr>
+                        <abbr title="Python"><img src="../images/python.svg" alt="Python"></abbr>
+                        <abbr title="SQLAlchemy"><img src="../images/SQLAlchemy.svg" alt="SQLAlchemy"></abbr>
+                    </div>
+
+                    <div class="tp-links">
+                        <a href="https://github.com/madelynacton/moj" target="_blank" class="tp-link-btn">GitHub <i class="ri-github-line"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objective / Goal -->
+    <section class="tp-section tp-bg-2">
+        <div class="tp-container">
+            <div class="tp-info-block">
+                <h2 class="tp-heading">Objective</h2>
+                <p class="tp-text">
+                    Build a secure full-stack Flask web application that allows users to submit jokes, rate others’
+                    jokes, and provides admin tools for moderation and role management. The app integrates AI-assisted
+                    joke rating, activity logging, and robust user authentication. Deployment is containerized using
+                    Docker, with database migrations handled via Alembic and SQLAlchemy ORM for PostgreSQL.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tp-section tp-bg-3">
+        <div class="tp-container">
+            <div class="tp-info-block">
+                <h2 class="tp-heading">Development Process</h2>
+
+                <div class="tp-subsection">
+                    <h3 class="tp-subheading">&#x1F4A1; Planning & Ideation</h3>
+                    <p class="tp-text">
+                        Mapped out features including joke submission, rating, user profiles, admin actions, and
+                        activity logging. Designed the database schema with SQLAlchemy and user flows for registration,
+                        login, and ratings.
+                    </p>
+                </div>
+
+                <div class="tp-subsection">
+                    <h3 class="tp-subheading">&#x1F4A1; Implementation</h3>
+                    <p class="tp-text">
+                        Implemented the backend using Flask with SQLAlchemy ORM and Alembic for migrations. Used
+                        Flask-Login for authentication, Flask-WTF for form handling, and Jinja2 templates for dynamic
+                        rendering. Routes were modularized for user, admin, and API functionality. Docker was used for
+                        containerized deployment with Gunicorn as the WSGI server.
+                    </p>
+                </div>
+
+                <div class="tp-subsection">
+                    <h3 class="tp-subheading">&#x1F4A1; Challenges & Solutions</h3>
+                    <p class="tp-text">
+                        <strong>Challenge:</strong> Preventing users from rating their own jokes and ensuring each joke
+                        can only be rated once per user.
+                    </p>
+                    <p class="tp-text">
+                        <strong>Solution:</strong> Developed a custom decorator to enforce author restrictions and added
+                        validation in the rating API. Unit and functional tests confirmed correctness.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tp-section tp-bg-4">
+        <div class="tp-container tp-flex-row">
+            <div class="tp-info-block">
+                <h2 class="tp-heading">Project Impact</h2>
+                <p class="tp-text">
+                    Created a dynamic joke-sharing platform with full CRUD functionality, secure authentication,
+                    role-based access control, AI-assisted ratings, and admin moderation tools.
+                </p>
+            </div>
+            <div class="tp-info-block">
+                <ul class="tp-list">
+                    <li>Full-stack Flask application with secure user authentication and role-based access.</li>
+                    <li>Implemented many-to-many relationships in SQLAlchemy for rating system.</li>
+                    <li>Gained hands-on experience with Python decorators, Flask-WTF, Jinja2, Docker, and CI/CD
+                        deployment.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="tp-section tp-bg-5">
+        <div class="tp-container">
+            <div class="tp-info-block">
+                <h2 class="tp-heading">Development Reflection</h2>
+                <p class="tp-text">
+                    The project evolved from a basic joke submission idea to a fully-featured, containerized web app
+                    with AI-assisted ratings, admin moderation, secure authentication, and database migrations. It
+                    reinforced full-stack development skills, backend design patterns, and team collaboration.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        &copy; 2025 Madelyn Acton — Designed & coded using HTML, CSS, JavaScript, Python & Flask
+    </footer>
+
+    <script src="../js/nav.js"></script>
+</body>
+
+</html>

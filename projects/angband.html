@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angband Monster File Editor</title>
+
+    <link rel="shortcut icon" href="../resources/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/modern-normalize.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a class="logo" href="../index.html">Madelyn Acton</a>
+
+            <i class="ri-menu-line menu-toggle"></i>
+
+            <ul class="nav-links">
+                <i class="ri-close-line menu-close"></i>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../projects.html" class="active">Projects</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="menu-backdrop"></div>
+    </nav>
+
+    <section class="tp-section tp-bg-1">
+        <div class="tp-container">
+            <a href="../projects.html" class="tp-back-btn">
+                <i class="ri-arrow-left-line"></i> Back to All Projects
+            </a>
+
+            <div class="tp-header-content">
+                <h1 class="tp-title">Angband Monster File Editor</h1>
+                <p class="tp-description">A Python command-line tool to search, view, and edit monster data for the game
+                    Angband, with robust input validation and file management.</p>
+                <div class="tp-meta-wrapper">
+                    <div class="tp-tech-icons">
+                        <abbr title="C">
+                            <img src="../images/c.svg" alt="C Programming Language">
+                        </abbr>
+                        <abbr title="Python">
+                            <img src="../images/python.svg" alt="python">
+                        </abbr>
+                        <abbr title="Visual Studio Code">
+                            <img src="../images/visual-studio-code.svg" alt="Visual Studio Code">
+                        </abbr>
+                    </div>
+
+                    <div class="tp-links">
+                        <a href="https://github.com/madelynacton/angband-mfe" target="_blank" class="tp-link-btn">
+                            GitHub <i class="ri-github-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tp-section tp-bg-2">
+        <div class="tp-container">
+            <div class="tp-info-block">
+                <h2 class="tp-heading">Objective</h2>
+                <p class="tp-text">The goal was to create a user-friendly command-line interface for editing monster
+                    attributes in Angband's "monster.txt" file. The program needed to allow safe editing, search
+                    functionality, and backup handling to prevent data loss.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tp-section tp-bg-3">
+        <div class="tp-container">
+            <div class="tp-info-block">
+                <h2 class="tp-heading">Development Process</h2>
+
+                <div class="tp-subsection">
+                    <h3 class="tp-subheading">&#x1F4A1; Planning & Ideation</h3>
+                    <p class="tp-text">My team and I analyzed the structure of Angband's monster data and designed a
+                        command-line workflow with search, list, and edit functionalities. Initially, we planned
+                        multiple screens to simulate a GUI-like interface but later simplified to a single interactive
+                        loop for better usability.</p>
+                </div>
+
+                <div class="tp-subsection">
+                    <h3 class="tp-subheading">&#x1F4A1; Implementation</h3>
+                    <p class="tp-text">I developed the Python backend to load, edit, and save monster data with input
+                        validation for attributes like HP, speed, flags, and blows. The program also creates a backup
+                        file ("monster_orig.txt") and only writes changes to "monster.txt" upon exit. Other team members
+                        worked on graph visualizations, logs, and documentation.</p>
+                </div>
+
+                <div class="tp-subsection">
+                    <h3 class="tp-subheading">&#x1F4A1; Challenges & Solutions</h3>
+                    <p class="tp-text"><strong>Technical Challenge:</strong> Handling diverse user input and ensuring
+                        changes were safely written back without corrupting the original data.</p>
+                    <p class="tp-text"><strong>The Solution:</strong> Created a mapping system for attribute names,
+                        robust input validation, and a static attribute list in the Monster class. All changes are
+                        written only on program exit to preserve data integrity.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tp-section tp-bg-4">
+        <div class="tp-container tp-flex-row">
+            <div class="tp-info-block">
+                <h2 class="tp-heading">Project Impact</h2>
+                <p class="tp-text">The final MFE allows users to search, list, and edit monsters with confidence,
+                    improving Angband gameplay customization. The program ensures backups, input validation, and proper
+                    data structure handling.</p>
+            </div>
+            <div class="tp-info-block">
+                <ul class="tp-list">
+                    <li>Developed a reliable Python CLI tool for managing Angband monsters.</li>
+                    <li>Gained experience in backend logic, file I/O, data validation, and team-based software
+                        development.</li>
+                    <li>Implemented a robust search and edit system with attribute mapping for intuitive user input.
+                    </li>
+                    <li>Designed a safe backup workflow to prevent data loss while allowing persistent edits.</li>
+                    <li>Improved understanding of handling complex data structures in Python, including lists and
+                        classes.</li>
+                    <li>Enhanced problem-solving skills by addressing edge cases and unexpected user input scenarios.
+                    </li>
+                    <li>Collaborated effectively with teammates on testing, documentation, and additional visualization
+                        features.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="tp-section tp-bg-5">
+        <div class="tp-container">
+            <div class="tp-info-block">
+                <h2 class="tp-heading">Development Reflection</h2>
+                <p class="tp-text">
+                    Throughout the span of approximate three weeks, the project grew from a complex, multi-screen CLI
+                    design to a streamlined, single-loop interface that is easier to use and maintain. Simplifying the
+                    design improved usability, testing efficiency, and overall team collaboration.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        &copy; 2025 Madelyn Acton — Designed & coded using HTML, CSS, & JavaScript
+    </footer>
+
+    <script src="../js/nav.js"></script>
+</body>
+
+</html>
