@@ -518,6 +518,8 @@ padding-bottom: 1rem;
 }
 
 .jump-links {
+    display: flex;
+    flex-flow: column nowrap;
   text-align: center;
   margin: 1rem 0 2rem;
   font-size: var(--text-size-lg);
@@ -530,7 +532,6 @@ padding-bottom: 1rem;
   text-underline-offset: 6px;
   margin: 0 0.3rem;
   transition: 0.3s;
-  margin-bottom: 1rem;
 }
 
 .jump-links a:hover {
@@ -1463,6 +1464,10 @@ padding-top: 50px;
   }
 
   /* about me section */
+  .jump-links{
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
   .intro-container {
     flex-direction: row;
     align-items: center;
