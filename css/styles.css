@@ -524,6 +524,7 @@ padding-bottom: 1rem;
   margin: 1rem 0 2rem;
   font-size: var(--text-size-lg);
   font-weight: 600;
+  gap: 1rem;
 }
 
 .jump-links a {
