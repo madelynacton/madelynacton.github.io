@@ -430,9 +430,11 @@ nav a.active {
 }
 
 .current-position img {
-  margin: 0 auto;
-  max-width: 350px;
-  padding-bottom: 1rem;
+display: block;
+max-width: 100%;
+height: auto;
+margin: 0 auto 1rem;
+padding-bottom: 1rem;
 }
 
 .current-position p {
