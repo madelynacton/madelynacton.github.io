@@ -1539,7 +1539,7 @@ padding-top: 50px;
     max-width: 48%;
     min-width: 0;
   }
-}
+
   .interest-group h3 {
     font-size: var(--text-size-2xl);
   }
@@ -1646,6 +1646,7 @@ padding-top: 50px;
   .resume-download {
     font-size: var(--text-size-md);
   }
+}
 
 
 /* special media query for hero texts and nav */
