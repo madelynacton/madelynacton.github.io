@@ -211,7 +211,7 @@ nav {
   color: var(--dark-navy-2);
   text-decoration: none;
   transition: 0.3s;
-  text-align: right;
+  text-align: center;
   border: none;
 }
 
@@ -717,12 +717,6 @@ details p {
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-}
-
-.interest-group:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .interests-categories h3 {
