@@ -309,7 +309,7 @@ nav a.active {
 
 
 .action-btns a button {
-  font-size: var(--text-size-lg);
+  font-size: var(--text-size-med);
   font-weight: 600;
   letter-spacing: 2px;
   padding: 1rem 2rem;
