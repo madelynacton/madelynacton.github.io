@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Text Editor</title>
+
+    <link rel="shortcut icon" href="../resources/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/modern-normalize.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a class="logo" href="../index.html">Madelyn Acton</a>
+
+            <i class="ri-menu-line menu-toggle"></i>
+
+            <ul class="nav-links">
+                <i class="ri-close-line menu-close"></i>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../projects.html" class="active">Projects</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="menu-backdrop"></div>
+    </nav>
+
+    <section class="tp-section tp-bg-1">
+        <div class="tp-container">
+            <a href="../projects.html" class="tp-back-btn">
+                <i class="ri-arrow-left-line"></i> Back to All Projects
+            </a>
+
+            <div class="tp-header-content">
+                <h1 class="tp-title">JavaScript Text Editor</h1>
+                <p class="tp-description">A browser-based rich text editor built with Express.js and Handlebars,
+                    featuring live formatting controls, theme switching, and real-time counters.</p>
+
+                <div class="tp-meta-wrapper">
+                    <div class="tp-tech-icons">
+                        <abbr title="JavaScript">
+                            <img src="../images/javascript.svg" alt="javascript">
+                        </abbr>
+                        <abbr title="Express.js">
+                            <img src="../images/Express.svg" alt="express.js">
+                        </abbr>
+                        <abbr title="Handlebars">
+                            <img src="../images/Handlebars.svg" alt="handlebars">
+                        </abbr>
+                        <abbr title="Node.js">
+                            <img src="../images/node-js.svg" alt="node.js">
+                        </abbr>
+                        <abbr title="HTML5">
+                            <img src="../images/html-5.svg" alt="html">
+                        </abbr>
+                        <abbr title="CSS3">
+                            <img src="../images/css-3.svg" alt="css">
+                        </abbr>
+
+
+
+                    </div>
+
+                    <div class="tp-links">
+                        <a href="https://github.com/madelynacton/js-text-editor" target="_blank" class="tp-link-btn">
+                            GitHub <i class="ri-github-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tp-section tp-bg-2">
+        <div class="tp-container">
+            <div class="tp-info-block">
+                <h2 class="tp-heading">Objective</h2>
+                <p class="tp-text">Build a fully interactive, browser-based text editor powered by an Express.js server
+                    and Handlebars templating. The editor needed to support a wide range of formatting tools: font
+                    family and size controls, bold/italic/underline, text and background color via RGB sliders, text
+                    alignment, find-and-replace, image insertion, margin and padding adjustment, and multiple selectable
+                    themes. All of these features are driven by DOM manipulation and event handling in vanilla
+                    JavaScript.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tp-section tp-bg-3">
+        <div class="tp-container">
+            <div class="tp-info-block">
+                <h2 class="tp-heading">Development Process</h2>
+
+                <div class="tp-subsection">
+                    <h3 class="tp-subheading">&#x1F4A1; Planning & Ideation</h3>
+                    <p class="tp-text">Before writing any code, I studied the provided CodePen reference to understand
+                        how the editor should look and behave, paying attention to toolbar groupings, button layout, and
+                        edge cases like multiple consecutive spaces. I then planned the project file structure: an
+                        Express app with assets in public/ and Handlebars templates in views/, mirroring the assignment
+                        requirements.</p>
+                </div>
+
+                <div class="tp-subsection">
+                    <h3 class="tp-subheading">&#x1F4A1; Implementation</h3>
+                    <p class="tp-text">I started with app.js, configuring Express, routing, and path handling, then
+                        moved to the Handlebars template (index.hbs). The toolbar was organized into semantic grouping
+                        divs, keeping related controls (e.g. bold, italic, underline) together and separated by visual
+                        dividers. I brought in Google Fonts for five typeface options and a font icon library for
+                        toolbar icons.</p>
+                    <p class="tp-text"> The JavaScript file handled all interactivity. I grabbed element references via
+                        getElementById, then built event listeners for each toolbar control in order of complexity,
+                        starting from basic text formatting up to image insertion and live counters. Functions were
+                        modularized to avoid code duplication, especially for the shared RGB color palette used by both
+                        text and background color pickers.</p>
+                </div>
+
+                <div class="tp-subsection">
+                    <h3 class="tp-subheading">&#x1F4A1; Challenges & Solutions</h3>
+                    <p class="tp-text"><strong>DOM Formatting: </strong>Applying styles only to selected text, rather
+                        than the whole editor, required learning the document.execCommand() API, which wraps selections
+                        in the appropriate HTML elements. This unlocked most of the text formatting features.</p>
+                    <p class="tp-text"><strong>Event Types: </strong>Several controls needed input event listeners
+                        rather than click (for instance, the RGB sliders and font size field), a distinction I worked
+                        through by testing and debugging iteratively.</p>
+                    <p class="tp-text"><strong>Live Counters: </strong>Keeping character, word, and line counts updated
+                        in real time was tricky. I implemented a single updateCounters() function that runs on every
+                        input event, calculating counts by splitting the editor content appropriately and updating the
+                        display elements.</p>
+                    <p class="tp-text"><strong>Server Workflow: </strong>Without a live-reload setup, every CSS or
+                        server-side change required manually restarting the Node server, which slowed styling iteration
+                        significantly. I adapted by batching visual changes before restarting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tp-section tp-bg-4">
+        <div class="tp-container tp-flex-row">
+            <div class="tp-info-block">
+                <h2 class="tp-heading">Project Impact</h2>
+                <p class="tp-text">The finished editor handles all required formatting features with a clean, themed UI.
+                    The project pushed my understanding of DOM manipulation, modular JavaScript architecture, and
+                    full-stack Node.js app structure well beyond what previous projects had covered.</p>
+            </div>
+            <div class="tp-info-block">
+                <ul class="tp-list">
+                    <li>Mastered DOM selection and execCommand-based rich text formatting.</li>
+                    <li>Built a modular, reusable RGB color palette component shared across two features.</li>
+                    <li>Implemented real-time counters tracking characters, words, lines, and elapsed edit time.</li>
+                    <li>Gained hands-on experience with Express.js routing and Handlebars templating.</li>
+                    <li>Improved problem-solving skills through iterative debugging and testing.</li>
+                    <li>Strengthened ability to collaborate with AI-assisted development tools.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="tp-section tp-bg-5">
+        <div class="tp-container">
+            <div class="tp-info-block">
+                <h2 class="tp-heading">Development Reflection</h2>
+                <p class="tp-text">
+                    Looking back, the project grew from a blank Express app to a fully featured in-browser text editor
+                    with a polished, themed interface. The JavaScript side was the steepest learning curve, as I had to
+                    wrestle with event types, selection-aware formatting, and debugging a live DOM without the
+                    convenience of a hot-reload setup. CSS came most naturally, though the constant server restarts made
+                    it slower than expected. Overall, this project was the most technically comprehensive one I've
+                    built, and it gave me a much clearer picture of how front-end interactivity, server-side routing,
+                    and templating fit together in a real application.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tp-section tp-bg-6">
+        <div class="tp-container">
+            <div class="tp-info-block">
+                <h2 class="tp-heading">References & Acknowledgements</h2>
+                <p class="tp-text">
+                    <strong>Claude (Anthropic) &mdash;</strong>
+                    Used throughout the project for code guidance, debugging assistance, and learning new concepts such
+                    as execCommand, event listener types, and Express.js path configuration. Accessed via claude.ai,
+                    March 2026. <br>
+                </p>
+                <p class="tp-text">
+                    <strong>CodePen example by nDav &mdash;</strong>
+                    <a href="https://codepen.io/nDav/pen/rOOwxG" target="_blank">CodePen Text Editor Example</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="site-footer">
+        &copy; 2026 Madelyn Acton — Designed & coded using HTML, CSS, & JavaScript
+    </footer>
+
+    <script src="../js/nav.js"></script>
+</body>
+
+</html>
