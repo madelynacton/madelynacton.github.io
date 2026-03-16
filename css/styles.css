@@ -923,6 +923,12 @@ padding-top: 50px;
 .tp-bg-6{
   background-color: var(--med-navy-3);
 }
+.tp-bg-6-link{
+  color: #ffffff;
+}
+.tp-bg-6-link:hover{
+  color: var(--light-navy-4);
+}
 .tp-section {
   padding: 0rem 1rem 3rem;
 }
